@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GameAnalysisLib">
+    <target name="game_lib">
+        <property name="lib-dir" value="${source.dir}/../../gameanalysis/" />
+        <exec executable="ant" dir="${lib-dir}">
+            <arg value="clean" />
+        </exec>
+        <exec executable="ant" dir="${lib-dir}">
+            <arg value="jar" />
+        </exec>
+        <copy file="${lib-dir}/gameanalysis.jar" todir="${source.dir}/../libs/" overwrite="true"/>
+    </target>
+</project>
